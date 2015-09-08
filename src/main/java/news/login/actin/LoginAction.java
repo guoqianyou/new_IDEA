@@ -1,14 +1,13 @@
 package news.login.actin;
 
-import javax.annotation.Resource;
-
+import news.login.beans.LoginUser;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
-import com.stx.news.login.beans.LoginUser;
+import javax.annotation.Resource;
 
 @Controller
 @Scope("prototype")
@@ -16,7 +15,7 @@ import com.stx.news.login.beans.LoginUser;
 @Namespace(value="/login")
 public class LoginAction {
 	@Resource
-	private LoginUser loginUser;
+	protected LoginUser loginUser;
 	@Action(value="login")
 	public String lolgin(){
 		
