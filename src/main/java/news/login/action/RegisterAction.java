@@ -1,6 +1,4 @@
-package news.login.actin;
-
-import javax.annotation.Resource;
+package news.login.action;
 
 import news.login.beans.RegisterUser;
 import org.apache.struts2.convention.annotation.Action;
@@ -8,6 +6,8 @@ import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+
+import javax.annotation.Resource;
 
 
 /**

@@ -85,9 +85,9 @@
 
         <!-- log4j日志引用包,包含slf4j-api和log4j -->
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.12</version>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-to-slf4j</artifactId>
+            <version>2.3</version>
         </dependency>
 
         <!-- Spring4包 -->
