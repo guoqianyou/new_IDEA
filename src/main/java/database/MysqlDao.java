@@ -1,4 +1,4 @@
-package news.dao;
+package database;
 
 import java.io.Serializable;
 import java.util.List;
