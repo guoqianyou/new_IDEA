@@ -4,6 +4,7 @@ import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
+import web.auth.AuthSignUser;
 
 import java.util.Map;
 
@@ -19,8 +20,8 @@ public class OAuthInterceptor extends AbstractInterceptor {
         ActionContext ctx = invocation.getInvocationContext();
         Map session = ctx.getSession();
         String auth = (String) session.get("stx_auth");
-
-        if (null != auth) {
+        if (null != auth&& AuthSignUser.isAuth(auth)){
+            return invocation.invoke();
         }
         return Action.LOGIN;
     }

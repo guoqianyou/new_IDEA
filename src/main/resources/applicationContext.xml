@@ -38,6 +38,7 @@
         <property name="packagesToScan">
             <list>
                 <value>news.model</value>
+                <value>database.model</value>
             </list>
         </property>
     </bean>

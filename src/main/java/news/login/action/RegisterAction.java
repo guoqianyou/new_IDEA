@@ -25,5 +25,4 @@ public class RegisterAction {
 	public String register(){
 		return null;
 	}
-	
 }

@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="stx_news:war exploded">
+  <artifact type="exploded-war" build-on-make="true" name="stx_news:war exploded">
     <output-path>E:/tomcat/apache-tomcat-8.0.24/idea_develop</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="stx_news/web/Web" />
@@ -21,7 +21,6 @@
           <element id="library" level="project" name="Maven: javassist:javassist:3.11.0.GA" />
           <element id="library" level="project" name="Maven: javax.servlet.jsp:jsp-api:2.2.1-b03" />
           <element id="library" level="project" name="Maven: javax.servlet:servlet-api:3.0-alpha-1" />
-          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.36" />
           <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache-core:2.4.3" />
           <element id="library" level="project" name="Maven: ognl:ognl:3.0.6" />
@@ -45,7 +44,6 @@
           <element id="library" level="project" name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:1.0.0.Final" />
           <element id="library" level="project" name="Maven: org.jboss:jandex:1.1.0.Final" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.12" />
-          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.12" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.0.RELEASE" />
@@ -57,6 +55,9 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: xml-apis:xml-apis:1.0.b2" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.3" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.3" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-simple:1.7.12" />
         </element>
       </element>
     </root>

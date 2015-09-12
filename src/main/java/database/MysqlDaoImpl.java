@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.io.Serializable;
 import java.util.List;
 
-@Repository("MysqlDao")
+@Repository("mysqlDao")
 public class MysqlDaoImpl<T> implements MysqlDao<T> {
     private SessionFactory sessionFactory;
 
@@ -29,7 +29,6 @@ public class MysqlDaoImpl<T> implements MysqlDao<T> {
     public Serializable save(T o) {
         return this.getCurrentSession().save(o);
     }
-
     public void delete(T o) {
         this.getCurrentSession().delete(o);
     }
