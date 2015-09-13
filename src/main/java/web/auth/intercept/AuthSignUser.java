@@ -1,4 +1,4 @@
-package web.auth;
+package web.auth.intercept;
 
 import database.MysqlDao;
 import database.MysqlDaoImpl;

@@ -81,5 +81,5 @@
       </aop:config>   -->
 
     <!-- 自动加载构建bean -->
-    <context:component-scan base-package="news.login.action"/>
+    <context:component-scan base-package="database"/>
 </beans> 

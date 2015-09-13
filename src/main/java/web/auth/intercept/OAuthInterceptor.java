@@ -1,10 +1,9 @@
-package web;
+package web.auth.intercept;
 
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
-import web.auth.AuthSignUser;
 
 import java.util.Map;
 

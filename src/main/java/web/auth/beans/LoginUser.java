@@ -1,4 +1,4 @@
-package news.login.beans;
+package web.auth.beans;
 
 
 public class LoginUser {
