@@ -8,8 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
 
-/**@author GQY
- * 用户数据
+/**
  * Created by GQY on 2015/9/11.
  */
 @Entity
@@ -22,8 +21,6 @@ public class UserInfomation implements Serializable{
     private String realName;
     private String phoneNo;
     private String headImgPath;
-    private String authority;
-
     @Id
     @GeneratedValue(generator = "generator")
     @GenericGenerator(name = "generator",strategy = "uuid")
@@ -74,13 +71,5 @@ public class UserInfomation implements Serializable{
 
     public void setHeadImgPath(String headImgPath) {
         this.headImgPath = headImgPath;
-    }
-
-    public String getAuthority() {
-        return authority;
-    }
-
-    public void setAuthority(String authority) {
-        this.authority = authority;
     }
 }
