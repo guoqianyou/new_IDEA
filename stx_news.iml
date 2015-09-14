@@ -16,12 +16,12 @@
       </configuration>
       <facet type="Struts2" name="Struts 2">
         <configuration>
-          <fileset id="s2fileset2" name="My Fileset 2" removed="false">
+          <fileset id="s2fileset" name="My Fileset " removed="false">
             <file>file://$MODULE_DIR$/src/main/resources/struts.xml</file>
-            <file>jar://D:/maven/repository/org/apache/struts/struts2-core/2.3.24/struts2-core-2.3.24.jar!/struts-default.xml</file>
-            <file>jar://D:/maven/repository/org/apache/struts/struts2-convention-plugin/2.3.24/struts2-convention-plugin-2.3.24.jar!/struts-plugin.xml</file>
-            <file>jar://D:/maven/repository/org/apache/struts/struts2-spring-plugin/2.3.24/struts2-spring-plugin-2.3.24.jar!/struts-plugin.xml</file>
-            <file>jar://D:/maven/repository/org/apache/struts/struts2-json-plugin/2.3.24/struts2-json-plugin-2.3.24.jar!/struts-plugin.xml</file>
+            <file>jar://E:/Maven/repertory/org/apache/struts/struts2-json-plugin/2.3.24/struts2-json-plugin-2.3.24.jar!/struts-plugin.xml</file>
+            <file>jar://E:/Maven/repertory/org/apache/struts/struts2-convention-plugin/2.3.24/struts2-convention-plugin-2.3.24.jar!/struts-plugin.xml</file>
+            <file>jar://E:/Maven/repertory/org/apache/struts/struts2-core/2.3.24/struts2-core-2.3.24.jar!/struts-default.xml</file>
+            <file>jar://E:/Maven/repertory/org/apache/struts/struts2-spring-plugin/2.3.24/struts2-spring-plugin-2.3.24.jar!/struts-plugin.xml</file>
           </fileset>
           <propertiesKeys disabled="false" />
         </configuration>
@@ -92,7 +92,6 @@
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.3" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.12" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.7.12" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
@@ -107,8 +106,9 @@
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.5" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.36" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.6.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.6.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.6.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
   </component>
 </module>

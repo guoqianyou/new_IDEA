@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
  *         登陆，注册
  */
 @Namespace(value = "/login")
-@ParentPackage(value = "struts-default,json-default")
+@ParentPackage(value = "json-default")
 @Results(value = {
         @Result(name = "register", type = "json",params = {"ignoreHierarchy","false","root","resUser"})
 })

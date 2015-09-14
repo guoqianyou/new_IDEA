@@ -11,5 +11,6 @@ public abstract class RequestBean implements Serializable {
     private static final long serialVersionUID = 6330843243577134804L;
     @Valid
     private Head head;
-
+    private Object body;
+    private void reload(){};
 }

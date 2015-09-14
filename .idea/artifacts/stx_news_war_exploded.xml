@@ -31,8 +31,6 @@
           <element id="library" level="project" name="Maven: org.apache.struts:struts2-json-plugin:2.3.24" />
           <element id="library" level="project" name="Maven: org.apache.struts:struts2-spring-plugin:2.3.24" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.5" />
-          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
-          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
           <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.22" />
           <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:4.0.5.Final" />
           <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
@@ -58,6 +56,11 @@
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.3" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.3" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-simple:1.7.12" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.6.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.6.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.6.1" />
         </element>
       </element>
     </root>
