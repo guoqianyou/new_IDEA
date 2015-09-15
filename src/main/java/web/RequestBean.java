@@ -12,5 +12,5 @@ public abstract class RequestBean implements Serializable {
     @Valid
     private Head head;
     private Object body;
-    private void reload(){};
+    protected abstract <T>T  reload();
 }

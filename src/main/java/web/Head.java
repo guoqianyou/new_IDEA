@@ -1,5 +1,7 @@
 package web;
 
+
+
 import com.fasterxml.jackson.annotation.JsonRootName;
 
 import javax.validation.constraints.NotNull;
@@ -8,7 +10,7 @@ import javax.validation.constraints.NotNull;
  * @author GQY
  * Created by GQY on 2015/9/14.
  */
-@JsonRootName(value = "head")
+@JsonRootName("head")
 public class Head {
     @NotNull
     private boolean isSuccess;

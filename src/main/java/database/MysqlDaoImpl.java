@@ -98,7 +98,7 @@ public class MysqlDaoImpl<T> implements MysqlDao<T> {
     }
 
     public T get(Class<T> c, Serializable id) {
-        return (T) this.getCurrentSession().get(c, id);
+        return this.getCurrentSession().get(c, id);
     }
 
     public T get(String hql, Object[] param) {
