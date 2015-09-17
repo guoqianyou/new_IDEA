@@ -19,8 +19,8 @@ public abstract class RequestBean implements Serializable {
 
     public Head getHead() {
         if (null == this.head)
-            this.reload(Head.class, "head");
-        return head;
+            this.head = reload(Head.class, "head");
+        return this.head;
     }
 
     public void setHead(Head head) {

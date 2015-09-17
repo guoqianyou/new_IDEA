@@ -81,4 +81,5 @@
 
     <!-- 自动加载构建bean -->
     <context:component-scan base-package="database"/>
+    <context:component-scan base-package="news.service"/>
 </beans> 

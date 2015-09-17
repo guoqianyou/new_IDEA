@@ -28,31 +28,29 @@
     <constant name="struts.configuration.xml.reload" value="true"/>
 
     <package name="default" namespace="/news" extends="json-default">
-        <interceptors>
-            <!--声明一个拦截器   进行登录检查-->
-            <interceptor name="checkeAuth" class="web.auth.intercept.OAuthInterceptor"/>
-            <!-- 重新定义defaultStack拦截器栈，需要先判断权限-->
-            <interceptor-stack name="mydefault">
-                <interceptor-ref name="checkeAuth"/>
-                <interceptor-ref name="defaultStack"/>
-            </interceptor-stack>
-        </interceptors>
-        <default-interceptor-ref name="mydefault"/>
+        <!-- 配置全局的Result -->
+
+        <!--<interceptors>-->
+            <!--&lt;!&ndash;声明一个拦截器   进行登录检查&ndash;&gt;-->
+            <!--<interceptor name="checkeAuth" class="web.auth.intercept.OAuthInterceptor"/>-->
+            <!--&lt;!&ndash; 重新定义defaultStack拦截器栈，需要先判断权限&ndash;&gt;-->
+            <!--<interceptor-stack name="mydefault">-->
+                <!--<interceptor-ref name="checkeAuth"/>-->
+                <!--<interceptor-ref name="defaultStack"/>-->
+            <!--</interceptor-stack>-->
+        <!--</interceptors>-->
+        <!--<default-interceptor-ref name="mydefault"/>-->
 
         <action name="ajax" class="web.ajax.AjaxAction">
             <result name="success" type="json">
                 <param name="ignoreHierarchy">false</param>
                 <param name="excludeNullProperties">true</param>
-                <param name="root">RequestBean</param>
+                <param name="root">responseBean</param>
             </result>
         </action>
 
 
-        <!-- 配置全局的Result -->
-        <global-results>
-            <result name="login">page/login.html</result>
-            <result name="noPrivilegeError"></result>
-        </global-results>
+
 
         <!--&lt;!&ndash; 首页 &ndash;&gt;-->
         <!--<action name="homeAction_*" class="" method="{1}">-->

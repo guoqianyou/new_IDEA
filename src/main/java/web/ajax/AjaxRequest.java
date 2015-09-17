@@ -23,7 +23,11 @@ public class AjaxRequest extends RequestBean{
     protected <T> T reload(Class<T> clas, String name) {
         Object object = RequestNews.getParamters(name,this.parameters);
         if(null != object) {
-            return (T) JsonNews.jsonToObject(object.toString(), clas);
+            if(object instanceof String[]) {
+                String a = ((String[])object)[0].toString().trim();
+                return (T) JsonNews.jsonToObject(a, clas);
+            }
+            return null;
         }
         return null;
     }
