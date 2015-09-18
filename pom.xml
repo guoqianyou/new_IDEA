@@ -160,6 +160,12 @@
             <artifactId>jackson-annotations</artifactId>
             <version>2.6.1</version>
         </dependency>
+        <!-- javaBean 操作工具-->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.2</version>
+        </dependency>
 
 
         <dependency>

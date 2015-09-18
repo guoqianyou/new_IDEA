@@ -48,7 +48,9 @@
                 <param name="root">responseBean</param>
             </result>
         </action>
+        <action name="form" class="web.form.FormAction">
 
+        </action>
 
 
 

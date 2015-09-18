@@ -7,7 +7,7 @@ import java.util.Base64;
 
 /**
  * @author GQY
- *         Base64 编码
+ *         Base64 编码 工具类
  *         Created by GQY on 2015/9/11.
  */
 public class Base64News extends Loger {
