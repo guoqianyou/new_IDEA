@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <configuration status="OFF">
     <appenders>
         <Console name="Console" target="SYSTEM_OUT">
@@ -12,5 +13,39 @@
         <logger name="exception.Loger" >
             <appender-ref ref="Console"/>
         </logger>
+=======
+        <!-- status=debug 可以查看log4j的装配过程 -->
+<configuration status="off">
+    <!--<properties>-->
+        <!--<property name="LOG_HOME">/log/fish</property>-->
+        <!--&lt;!&ndash; 日志备份目录 &ndash;&gt;-->
+        <!--<property name="BACKUP_HOME">{LOG_HOME}/backup</property>-->
+        <!--<property name="STAT_NAME">stat</property>-->
+        <!--<property name="SERVER_NAME">global</property>-->
+    <!--</properties>-->
+    <appenders>
+        <!-- 定义控制台输出 -->
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n" />
+        </Console>
+        <!-- 程序员调试日志 -->
+        <!--<RollingRandomAccessFile name="DevLog" fileName="${LOG_HOME}/${SERVER_NAME}"-->
+                                 <!--filePattern="${LOG_HOME}/${SERVER_NAME}.%d{yyyy-MM-dd-HH}.log">-->
+            <!--<PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n" />-->
+            <!--<Policies>-->
+                <!--<TimeBasedTriggeringPolicy interval="1" modulate="true" />-->
+            <!--</Policies>-->
+        <!--</RollingRandomAccessFile>-->
+    </appenders>
+    <loggers>
+        <!-- Game Stat  logger -->
+        <logger name="exception.Loger" level="info">
+            <appender-ref ref="Console" />
+        </logger>
+        <!-- Root Logger -->
+        <root level="DEBUG">
+            <appender-ref ref="Console" />
+        </root>
+>>>>>>> origin/gqy
     </loggers>
 </configuration>

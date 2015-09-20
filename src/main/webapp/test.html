@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script src="plugins/jQuery/js/jQuery-2.1.4.min.js"></script>
+<script type="application/javascript">
+   $(function(){
+       $.ajax({
+           type:"post",
+           url: "/news/news/ajax.htm",
+           dataType:"json",
+           data: {
+               head:'{"isSuccess":true,"msg":"adsd","serviceName":"firstTest"}',
+               body:'{"bb":"asdfddsf"}'
+           },
+           success:function(result){
+               alert(result);
+           }
+       })
+   })
+</script>
+<body>
+
+</body>
+</html>

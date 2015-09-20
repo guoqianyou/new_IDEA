@@ -37,7 +37,6 @@
         <!-- 自动扫描注解方式配置的hibernate类文件 -->
         <property name="packagesToScan">
             <list>
-                <value>news.model</value>
                 <value>database.model</value>
             </list>
         </property>
@@ -82,4 +81,5 @@
 
     <!-- 自动加载构建bean -->
     <context:component-scan base-package="database"/>
+    <context:component-scan base-package="news.service"/>
 </beans> 

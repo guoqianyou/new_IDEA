@@ -27,7 +27,7 @@
     <!-- 当struts的配置文件修改后,系统是否自动重新加载该文件,默认值为false(生产环境下使用),开发阶段最好打开 -->
     <constant name="struts.configuration.xml.reload" value="true"/>
 
-    <package name="default" namespace="/news" extends="json-default">
+    <package name="default" namespace="/" extends="json-default">
         <interceptors>
             <!--声明一个拦截器   进行登录检查-->
             <interceptor name="checkeAuth" class="web.auth.intercept.OAuthInterceptor"/>
@@ -39,13 +39,6 @@
         </interceptors>
         <default-interceptor-ref name="mydefault"/>
 
-        <action name="ajax" class="web.ajax.AjaxAction">
-            <result name="success" type="json">
-                <param name="ignoreHierarchy">false</param>
-                <param name="excludeNullProperties">true</param>
-                <param name="root">RequestBean</param>
-            </result>
-        </action>
 
 
         <!-- 配置全局的Result -->
@@ -56,13 +49,13 @@
 
         <!--&lt;!&ndash; 首页 &ndash;&gt;-->
         <!--<action name="homeAction_*" class="" method="{1}">-->
-        <!--<result name="{1}">/WEB-INF/jsp/homeAction/{1}.jsp</result>-->
-        <!--&lt;!&ndash;-->
-        <!--<result name="index">/WEB-INF/jsp/homeAction/Index.jsp</result>-->
-        <!--<result name="top">/WEB-INF/jsp/homeAction/Top.jsp</result>-->
-        <!--<result name="bottom">/WEB-INF/jsp/homeAction/Bottom.jsp</result>-->
-        <!--<result name="left">/WEB-INF/jsp/homeAction/Left.jsp</result>-->
-        <!--<result name="mainFrame">/WEB-INF/jsp/homeAction/MainFrame.jsp</result> &ndash;&gt;-->
+            <!--<result name="{1}">/WEB-INF/jsp/homeAction/{1}.jsp</result>-->
+            <!--&lt;!&ndash;-->
+            <!--<result name="index">/WEB-INF/jsp/homeAction/Index.jsp</result>-->
+            <!--<result name="top">/WEB-INF/jsp/homeAction/Top.jsp</result>-->
+            <!--<result name="bottom">/WEB-INF/jsp/homeAction/Bottom.jsp</result>-->
+            <!--<result name="left">/WEB-INF/jsp/homeAction/Left.jsp</result>-->
+            <!--<result name="mainFrame">/WEB-INF/jsp/homeAction/MainFrame.jsp</result> &ndash;&gt;-->
         <!--</action>-->
 
     </package>

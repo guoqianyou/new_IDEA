@@ -1,29 +1,33 @@
 package web.ajax;
 
-import utils.JsonNews;
-import utils.RequestNews;
-import web.RequestBean;
+import web.Head;
 
-import java.util.Map;
+import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * @author GQY
- *         Created by GQY on 2015/9/14.
+ * Created by GQY on 2015/9/14.
  */
-public class AjaxRequest extends RequestBean {
+public class AjaxRequest implements Serializable {
 
     private static final long serialVersionUID = -938759752665532982L;
-    private Map<String, Object> parameters;
+    private Head head;
+    private Objects body;
 
-    public AjaxRequest(Map<String, Object> parameters) {
-        this.parameters = parameters;
+    public Head getHead() {
+        return head;
     }
 
-    protected <T> T reload(Class<T> clas, String name) {
-        Object object = RequestNews.getParamters(name, this.parameters);
-        if (null != object) {
-            return (T) JsonNews.jsonToObject(object.toString(), clas);
-        }
-        return null;
+    public void setHead(Head head) {
+        this.head = head;
+    }
+
+    public Objects getBody() {
+        return body;
+    }
+
+    public void setBody(Objects body) {
+        this.body = body;
     }
 }

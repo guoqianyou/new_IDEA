@@ -9,8 +9,4 @@ import com.opensymphony.xwork2.ActionSupport;
 public class AjaxAction extends ActionSupport{
     private static final long serialVersionUID = -4361321323693253764L;
 
-    @Override
-    public String execute() throws Exception {
-        return super.execute();
-    }
 }
