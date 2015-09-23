@@ -1,7 +1,6 @@
 package web.ajax;
 
 import utils.JsonNews;
-import utils.MapNews;
 import utils.RequestNews;
 import web.RequestBean;
 
@@ -27,9 +26,8 @@ public class AjaxRequest extends RequestBean{
             if(object instanceof String[]) {
                 String a = ((String[])object)[0].toString().trim();
                 return (T) JsonNews.jsonToObject(a, clas);
-            }else{
-                return MapNews.mapToObject((Map<String, Object>) object,clas);
             }
+            return null;
         }
         return null;
     }
