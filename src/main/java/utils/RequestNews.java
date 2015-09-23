@@ -10,8 +10,9 @@ import java.util.Map;
 public class RequestNews {
     /**
      * 根据名字在paramters中获得数据
-     * @param name 在paramters中的名字
-     * @param paramters  在这个paramters中获得
+     *
+     * @param name      在paramters中的名字
+     * @param paramters 在这个paramters中获得
      * @return 返回获得的数据
      */
     public static Object getParamters(final String name, final Map<String, Object> paramters) {
@@ -19,7 +20,7 @@ public class RequestNews {
             return null;
         } else {
             Object o = paramters.get(name);
-            return o;
+            return o == null ? paramters : o;
         }
     }
 }

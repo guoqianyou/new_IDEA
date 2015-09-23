@@ -3,12 +3,14 @@ package utils;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import exception.Loger;
 
 import java.io.IOException;
+import java.util.Map;
 
 /**
  * @author GQY
@@ -42,5 +44,19 @@ public class JsonNews {
             Loger.logger.warn("Json->Object解码错误！");
             return null;
         }
+    }
+
+    /**
+     * object 转json
+     * @param jsonObject 需要转化的obj对象
+     * @return 转化后的json字符串
+     */
+    public static String objectToJson(Object jsonObject){
+        try {
+            return objectMapper.writeValueAsString(jsonObject);
+        } catch (JsonProcessingException e) {
+            Loger.logger.warn("Map->String解码错误！");
+        }
+        return null;
     }
 }
