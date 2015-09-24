@@ -18,7 +18,7 @@
     <div class="register-box-body">
         <p class="login-box-msg">注册一个新的用户</p>
 
-        <form action="#" method="post">
+        <form  method="post">
             <div class="form-group has-feedback">
                 <input type="text" class="form-control" placeholder="True name" id="realName" required="required">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -68,15 +68,27 @@
     $(function () {
         var isok = false;
         $("#sub").click(function () {
-
+            var bool = document.getElementById("email").checkValidity();
+            if(bool){
+                $.post("../login/checkEmail.htm",{email:$("#email").val()},function(data){
+                        var obj = $.parseJSON(data);
+                            if(obj.check){
+                                document.getElementById("email").setCustomValidity("");
+                            }else{
+                                document.getElementById("email").setCustomValidity("邮箱已经被使用！");
+                            }
+                    }
+                )
+            }
         });
 
         $("input[name=pwd]").change(function () {
            if($("#password").val()==$("#passw").val()){
                $("#ppass").removeClass("has-error");
+               document.getElementById("passw").setCustomValidity("");
            }else{
                $("#ppass").addClass("has-error");
-               document.getElementById("passw").setCustomValidity("两次输入的密码不一致")
+               document.getElementById("passw").setCustomValidity("两次输入的密码不一致");
            }
         });
         //验证 code 正确性

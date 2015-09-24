@@ -9,11 +9,15 @@ import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
 import utils.Base64News;
 import utils.DateUtils;
+import utils.JsonNews;
 import web.auth.beans.RegisterUser;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -23,10 +27,13 @@ import javax.servlet.http.HttpSession;
  */
 
 @Namespace(value = "/login")
-@ParentPackage(value = "struts-default")
+@ParentPackage(value = "json-default")
 @Results({
         @Result(name = "success", location = "/page/backadmin/index.html"),
-        @Result(name = "input", location = "/page/error.jsp")
+        @Result(name = "input", location = "/page/error.jsp"),
+        @Result(name="json",type = "json",params = {
+                "root","result"
+        })
 })
 public class RegisterAction extends ActionSupport {
     private static final long serialVersionUID = -3079511833295511849L;
@@ -34,6 +41,20 @@ public class RegisterAction extends ActionSupport {
     private MysqlDao mysqlDao;
     private HttpServletRequest request;
     private HttpServletResponse response;
+    private String result;
+    private String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getResult() {
+        return result;
+    }
 
     public HttpServletResponse getResponse() {
         return response;
@@ -89,6 +110,26 @@ public class RegisterAction extends ActionSupport {
         session.setAttribute("stx_auth", getsignDate(userInfomation.getId()));
         return SUCCESS;
     }
+    @Action(value="checkEmail")
+    public String checkEmail(){
+        long cou = mysqlDao.count("select count(*) from UserInfomation where username='"+email+"'");
+        Map map = new HashMap();
+        if(cou==0){
+            map.put("check",true);
+        }else{
+            map.put("check",false);
+        }
+        result= JsonNews.objectToJson(map);
+        return "json";
+    }
+
+
+
+
+
+
+
+
 
     /**
      * 获取加密后的 auth字符串
