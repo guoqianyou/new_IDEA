@@ -22,7 +22,7 @@ public class ValidateCodeNews {
     /**
      * 验证码难度级别，Simple只包含数字，Medium包含数字和小写英文，Hard包含数字和大小写英文
      */
-    public enum SecurityCodeLevel {Simple,Medium,Hard};
+    public enum SecurityCodeLevel {Simple,Medium,Hard}
 
     /**
      * 产生默认验证码，4位中等难度

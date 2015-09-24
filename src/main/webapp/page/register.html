@@ -69,7 +69,7 @@
         var isok = false;
         $("#sub").click(function () {
 
-        })
+        });
 
         $("input[name=pwd]").change(function () {
            if($("#password").val()==$("#passw").val()){
@@ -78,7 +78,7 @@
                $("#ppass").addClass("has-error");
                document.getElementById("passw").setCustomValidity("两次输入的密码不一致")
            }
-        })
+        });
         //验证 code 正确性
         $("#valiCode").change(function () {
             $.ajax({
@@ -99,7 +99,7 @@
                 }
 
             })
-        })
+        });
         //验证码 切换
         $("#identifying_code").click(function () {
             $(this).attr("src", "../tool/validateCode.htm?timestamp=" + new Date().getTime());
