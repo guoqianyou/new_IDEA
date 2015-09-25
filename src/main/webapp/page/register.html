@@ -18,21 +18,21 @@
     <div class="register-box-body">
         <p class="login-box-msg">注册一个新的用户</p>
 
-        <form  method="post">
+        <form action="../login/register.htm" method="post">
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="True name" id="realName" required="required">
+                <input type="text" class="form-control" placeholder="True name" id="realName" required="required" name="registerUser.realName">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="Email For Login" id="email" required="required">
+                <input type="email" class="form-control" placeholder="Email For Login" id="email" required="required" name="registerUser.email">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" name="pwd" placeholder="Password" id="password" required="required">
+                <input type="password" class="form-control" name="registerUser.password" placeholder="Password" id="password" required="required">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback" id="ppass">
-                <input type="password" class="form-control" name="pwd" placeholder="Retype password" id="passw" required="required">
+                <input type="password" class="form-control" name="registerUser.password" placeholder="Retype password" id="passw" required="required">
                 <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
             </div>
             <div>
@@ -48,7 +48,7 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-xs-12">
-                        <button type="button" id="sub" class="btn btn-primary btn-block btn-flat">注册</button>
+                        <button type="submit" id="sub" class="btn btn-primary btn-block btn-flat">注册</button>
                     </div>
                     <!-- /.col -->
                 </div>
@@ -67,6 +67,7 @@
 <script>
     $(function () {
         var isok = false;
+        //邮箱唯一性。
         $("#sub").click(function () {
             var bool = document.getElementById("email").checkValidity();
             if(bool){
@@ -80,9 +81,14 @@
                     }
                 )
             }
+            if(isok){
+                document.getElementById("valiCode").setCustomValidity("");
+            }else{
+                document.getElementById("valiCode").setCustomValidity("验证码错误！");
+            }
         });
 
-        $("input[name=pwd]").change(function () {
+        $("input[name=registerUser\\.password]").change(function () {
            if($("#password").val()==$("#passw").val()){
                $("#ppass").removeClass("has-error");
                document.getElementById("passw").setCustomValidity("");

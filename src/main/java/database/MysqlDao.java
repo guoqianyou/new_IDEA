@@ -14,7 +14,7 @@ public interface MysqlDao<T> {
      *
      *
      * @param o  保存的对象
-     * @return Serializable
+     * @return  主键
      */
     Serializable save(T o);
 

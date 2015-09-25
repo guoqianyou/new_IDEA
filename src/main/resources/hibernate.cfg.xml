@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <!DOCTYPE hibernate-configuration PUBLIC
-"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"-//Hibernate/Hibernate Configuration DTD 5.0//EN"
 "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
@@ -19,10 +19,10 @@
 		<property name="connection.useUnicode">true</property>
 		<property name="connection.characterEncoding">UTF-8</property>
 
-		<!-- 缓存设置 -->
-		<property name="cache.provider_configuration_file_resource_path">/ehcache.xml</property>
-		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
-		<property name="cache.use_query_cache">true</property>
+		<!--&lt;!&ndash; 缓存设置 &ndash;&gt;-->
+		<!--<property name="cache.provider_configuration_file_resource_path">/ehcache.xml</property>-->
+		<!--<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>-->
+		<!--<property name="cache.use_query_cache">true</property>-->
 
 	</session-factory>
 </hibernate-configuration>  
