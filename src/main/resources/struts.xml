@@ -26,7 +26,7 @@
     <constant name="struts.serve.static.browserCache" value="false"/>
     <!-- 当struts的配置文件修改后,系统是否自动重新加载该文件,默认值为false(生产环境下使用),开发阶段最好打开 -->
     <constant name="struts.configuration.xml.reload" value="true"/>
-
+    <constant name="struts.objectFactory.spring.autoWire" value="name"/>
     <package name="default" namespace="/news" extends="json-default">
         <!-- 配置全局的Result -->
 
