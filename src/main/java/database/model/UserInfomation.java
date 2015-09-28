@@ -9,10 +9,12 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by GQY on 2015/9/11.
+ * @author GQY
+ *         Created by GQY on 2015/9/11.
+ *         用户信息
  */
 @Entity
-public class UserInfomation implements Serializable{
+public class UserInfomation implements Serializable {
 
     private static final long serialVersionUID = 2339416823646092085L;
     private String id;
@@ -21,10 +23,11 @@ public class UserInfomation implements Serializable{
     private String realName;
     private String phoneNo;
     private String headImgPath;
+
     @Id
     @GeneratedValue(generator = "generator")
-    @GenericGenerator(name = "generator",strategy = "uuid")
-    @Column(unique =true,nullable = false)
+    @GenericGenerator(name = "generator", strategy = "uuid")
+    @Column(unique = true, nullable = false)
     public String getId() {
         return id;
     }
