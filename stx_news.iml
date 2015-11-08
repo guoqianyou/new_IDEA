@@ -22,6 +22,7 @@
             <file>jar://E:/Maven/repertory/org/apache/struts/struts2-convention-plugin/2.3.24/struts2-convention-plugin-2.3.24.jar!/struts-plugin.xml</file>
             <file>jar://E:/Maven/repertory/org/apache/struts/struts2-core/2.3.24/struts2-core-2.3.24.jar!/struts-default.xml</file>
             <file>jar://E:/Maven/repertory/org/apache/struts/struts2-spring-plugin/2.3.24/struts2-spring-plugin-2.3.24.jar!/struts-plugin.xml</file>
+            <file>jar://E:/Maven/repertory/org/apache/struts/struts2-tiles3-plugin/2.3.24.1/struts2-tiles3-plugin-2.3.24.1.jar!/struts-plugin.xml</file>
           </fileset>
           <propertiesKeys disabled="false" />
         </configuration>
